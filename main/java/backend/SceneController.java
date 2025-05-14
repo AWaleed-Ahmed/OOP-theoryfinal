@@ -78,5 +78,32 @@ public class SceneController {
         stage.setScene(scene);
         stage.show();
     }
+    public void switchToScene5(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/frontend/SignUp.fxml")));
+        Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void handleSignUp(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/frontend/SignUp.fxml"));
+        Node source = (Node) event.getSource();
+        Parent parent = source.getParent();
+
+        TextField usernameField = (TextField) parent.lookup("#usernameField");
+        PasswordField passwordField = (PasswordField) parent.lookup("#passwordField");
+
+        String username = usernameField.getText();
+        String passwordText = passwordField.getText();
+
+        try {
+            int password = Integer.parseInt(passwordText);
+            auth.signup(username, password);
+            switchToScene1(event);
+        } catch (NumberFormatException e) {
+            System.out.println("Password must be numeric.");
+        }
+    }
+
 }
 

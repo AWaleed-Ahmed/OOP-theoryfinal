@@ -16,33 +16,18 @@
             <Image url="@../images/ColorfulBackground.jpg" />
          </image>
       </ImageView>
-      <PasswordField layoutX="63.0" layoutY="293.0" prefHeight="44.0" prefWidth="328.0">
-         <font>
-            <Font name="Comic Sans MS" size="12.0" />
-         </font>
-      </PasswordField>
-      <TextField layoutX="63.0" layoutY="185.0" prefHeight="44.0" prefWidth="328.0" />
-      <Button layoutX="421.0" layoutY="381.0" mnemonicParsing="false" onAction="#switchToScene1" onMouseClicked="#switchToScene1" prefHeight="35.0" prefWidth="87.0" text="Done" />
-      <Label layoutX="76.0" layoutY="306.0" opacity="0.65" prefHeight="18.0" prefWidth="87.0" text="password">
-         <font>
-            <Font name="Comic Sans MS" size="12.0" />
-         </font>
-      </Label>
-      <Label layoutX="75.0" layoutY="198.0" opacity="0.65" prefHeight="18.0" prefWidth="172.0" text="username / e-mail address">
-         <font>
-            <Font name="Comic Sans MS" size="12.0" />
-         </font>
-      </Label>
-      <Label layoutX="63.0" layoutY="273.0" prefHeight="18.0" prefWidth="87.0" text="PASSWORD">
-         <font>
-            <Font name="Comic Sans MS Bold" size="13.0" />
-         </font>
-      </Label>
-      <Label layoutX="61.0" layoutY="165.0" prefHeight="19.0" prefWidth="217.0" text="USERNAME or EMAIL ADDRESS">
-         <font>
-            <Font name="Comic Sans MS Bold" size="13.0" />
-         </font>
-      </Label>
+      <TextField fx:id="usernameField" layoutX="63.0" layoutY="185.0" prefHeight="44.0" prefWidth="328.0" />
+      <PasswordField fx:id="passwordField" layoutX="63.0" layoutY="293.0" prefHeight="44.0" prefWidth="328.0" />
+
+      <Button layoutX="421.0" layoutY="381.0" mnemonicParsing="false" onAction="#handleSignUp" onMouseClicked="#switchToScene3" prefHeight="35.0" prefWidth="87.0" text="Done" />
+      <Label layoutX="76.0" layoutY="306.0" opacity="0.65" text="password" />
+      <Label layoutX="75.0" layoutY="198.0" opacity="0.65" text="username / e-mail address" />
+      <Label layoutX="63.0" layoutY="273.0" text="PASSWORD" />
+      <Label layoutX="61.0" layoutY="165.0" text="USERNAME or EMAIL ADDRESS" />
+      <Label layoutX="137.0" layoutY="37.0" text="SIGN UP" underline="true" />
+      <Label layoutX="448.0" layoutY="37.0" text="Yesss," />
+      <Label layoutX="448.0" layoutY="52.0" text="new member" />
+      <Label layoutX="448.0" layoutY="71.0" text="onboard !!" />
       <ImageView fitHeight="504.0" fitWidth="304.0" layoutX="700.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/SignUpQuote.jpg" />

@@ -71,7 +71,7 @@
             <Font name="Comic Sans MS" size="12.0" />
          </font>
       </Label>
-      <Hyperlink layoutX="819.0" layoutY="342.0" onAction="#switchToScene2" prefHeight="25.0" prefWidth="59.0" text="Sign up">
+      <Hyperlink layoutX="819.0" layoutY="342.0" onAction="#switchToScene5" prefHeight="25.0" prefWidth="59.0" text="Sign up">
          <font>
             <Font name="Comic Sans MS" size="12.0" />
          </font>

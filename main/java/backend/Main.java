@@ -18,7 +18,7 @@ public class Main extends Application {
     // these are all static take baarbaar system run karein tu system ko yaad rahe number of users
     private static final int MAX_USERS = 50;
     private static final int DEFAULT_USER_COUNT = 5;
-    private static final String USER_FILE = "users.txt";
+    private static final String USER_FILE = "D:\\for java\\java projects\\main(1)\\users.txt";
 
     //constructor to call some passwords and accounts for testing
     public static final authenticator auth = new authenticator(
@@ -73,15 +73,18 @@ public class Main extends Application {
             password[usercount] = newPassword;
 
             try (BufferedWriter writer = new BufferedWriter(new FileWriter(USER_FILE, true))) {
-                writer.write(newUsername + "," + newPassword + "\n");
-            } catch (IOException e) {
+                System.out.println("Saving to file: " + new File(USER_FILE).getAbsolutePath());
+
+                System.out.println("Saving user: " + newUsername + ", " + newPassword); // ADD THIS
+
+                } catch (IOException e) {
                 System.out.println("Error saving user: " + e.getMessage());
             }
             usercount++;
         }
 
         public void loadUsersFromFile() {
-            try (Scanner fileScanner = new Scanner(new File(USER_FILE))) {
+            try (Scanner fileScanner = new Scanner(new File("D:\\for java\\java projects\\main(1)\\users.txt"))) {
                 int i = DEFAULT_USER_COUNT;
                 while (fileScanner.hasNextLine() && i < MAX_USERS) {
                     String[] userData = fileScanner.nextLine().split(",");
