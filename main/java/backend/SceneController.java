@@ -132,7 +132,7 @@ public class SceneController {
             Label levelLabel = (Label) root.lookup("#levelLabel");
 
             if (bmiLabel != null) {
-                bmiLabel.setText(String.format(""+bmi));
+                bmiLabel.setText(String.format("%.2f", bmi));
             }
             if (levelLabel != null) {
                 levelLabel.setText(level);
