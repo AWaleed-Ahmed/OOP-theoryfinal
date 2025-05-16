@@ -41,10 +41,10 @@
             <Font name="Showcard Gothic" size="40.0" />
          </font>
       </Label>
-      <TextField layoutX="624.0" layoutY="121.0" prefHeight="43.0" prefWidth="240.0" />
-      <TextField layoutX="624.0" layoutY="183.0" prefHeight="43.0" prefWidth="240.0" />
-      <TextField layoutX="624.0" layoutY="307.0" prefHeight="43.0" prefWidth="240.0" />
-      <TextField layoutX="624.0" layoutY="246.0" prefHeight="43.0" prefWidth="240.0" />
+      <TextField fx:id="nameField" layoutX="624.0" layoutY="121.0" prefHeight="43.0" prefWidth="240.0" />
+      <TextField fx:id="ageField" layoutX="624.0" layoutY="183.0" prefHeight="43.0" prefWidth="240.0" />
+      <TextField fx:id="weightField" layoutX="624.0" layoutY="246.0" prefHeight="43.0" prefWidth="240.0" />
+      <TextField fx:id="heightField" layoutX="624.0" layoutY="307.0" prefHeight="43.0" prefWidth="240.0" />
       <Label layoutX="405.0" layoutY="125.0" prefHeight="34.0" prefWidth="165.0" text="FULL NAME" textAlignment="JUSTIFY">
          <font>
             <Font name="Showcard Gothic" size="24.0" />
@@ -70,12 +70,12 @@
             <Font name="Showcard Gothic" size="24.0" />
          </font>
       </Label>
-      <Button layoutX="624.0" layoutY="369.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="100.0" text="MALE">
+      <Button fx:id="maleButton" layoutX="624.0" layoutY="369.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="100.0" text="MALE" onAction="#handleMaleGender">
          <font>
             <Font name="Showcard Gothic" size="13.0" />
          </font>
       </Button>
-      <Button layoutX="744.0" layoutY="369.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="100.0" text="FEMALE">
+      <Button fx:id="femaleButton" layoutX="744.0" layoutY="369.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="100.0" text="FEMALE" onAction="#handleFemaleGender">
          <font>
             <Font name="Showcard Gothic" size="13.0" />
          </font>

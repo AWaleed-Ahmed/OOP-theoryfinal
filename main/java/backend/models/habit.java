@@ -2,8 +2,8 @@ package backend.models;
 import java.util.Scanner;
 
 public class habit {
-  int age;
-  String gender;
+  public int age;
+  public String gender;
   public double weigth;
   public double heigth;
   int hours;
@@ -108,8 +108,5 @@ public class habit {
               "Stay motivated ✌️");
       System.out.println("****************************************************************************");
     }
-
-
-
 }
 
