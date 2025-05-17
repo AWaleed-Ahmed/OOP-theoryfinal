@@ -7,7 +7,7 @@ package backend.models;
 
 import java.util.Scanner;
 
-public class fitnessgoal extends calculation {
+public class fitnessgoal extends BMI_Calculation_Tips {
     double bmi;
 
     public void suggestPlanBasedOnGoalAndBMI(double bmi) {

@@ -1,7 +1,7 @@
 package backend;
 
 import backend.models.authenticator;
-import backend.models.calculation;
+import backend.models.BMI_Calculation_Tips;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -15,8 +15,6 @@ import javafx.scene.control.TextField;
 import java.io.IOException;
 import java.net.URL;
 import java.util.Objects;
-import backend.models.*;
-import backend.models.UserData;
 
 public class SceneController {
     authenticator auth;
@@ -104,7 +102,7 @@ public void switchToScene3(ActionEvent event) throws IOException {
             userData.setHeigth(height);
 
             // Calculate BMI
-            calculation calc = new calculation();
+            BMI_Calculation_Tips calc = new BMI_Calculation_Tips();
             calc.bmical(weight, height);
             double bmi = calc.index();
             String tips = calc.getTips();
