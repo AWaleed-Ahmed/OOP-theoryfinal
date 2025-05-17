@@ -24,7 +24,6 @@ public class calorietracker {
         this.foodcalorie.put("egg", 1.1);
         this.foodcalorie.put("mutton", 1.1);
         this.foodcalorie.put("oats", 1.1);
-        this.foodcalorie.put("dates", 1.1);
         this.foodcalorie.put("peanutbutter", 1.1);
     }
 
