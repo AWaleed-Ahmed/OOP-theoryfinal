@@ -17,7 +17,7 @@ public class BMI_Calculation_Tips {
 
     public String getTips() {
         StringBuilder tips = new StringBuilder();
-
+// change the tips
         if (bmi < 18.5) {
             tips.append("YOU ARE UNDERWEIGHT\n\n")
                     .append("⛳ Eat more calories than you burn — aim for a calorie surplus\n")

@@ -7,6 +7,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="979.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="backend.SceneController">
    <children>
@@ -70,12 +71,12 @@
             <Font name="Showcard Gothic" size="24.0" />
          </font>
       </Label>
-      <Button fx:id="maleButton" layoutX="624.0" layoutY="369.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="100.0" text="MALE" onAction="#handleMaleGender">
+      <Button fx:id="maleButton" layoutX="624.0" layoutY="369.0" mnemonicParsing="false" onAction="#handleMaleGender" prefHeight="34.0" prefWidth="100.0" text="MALE">
          <font>
             <Font name="Showcard Gothic" size="13.0" />
          </font>
       </Button>
-      <Button fx:id="femaleButton" layoutX="744.0" layoutY="369.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="100.0" text="FEMALE" onAction="#handleFemaleGender">
+      <Button fx:id="femaleButton" layoutX="744.0" layoutY="369.0" mnemonicParsing="false" onAction="#handleFemaleGender" prefHeight="34.0" prefWidth="100.0" text="FEMALE">
          <font>
             <Font name="Showcard Gothic" size="13.0" />
          </font>
@@ -90,5 +91,35 @@
             <Image url="@../images/GreetingWavingHelloPanda-Photoroom.png" />
          </image>
       </ImageView>
+      <Label layoutX="631.0" layoutY="130.0" opacity="0.65" prefHeight="18.0" prefWidth="76.0" text="M. Ali">
+         <font>
+            <Font name="Comic Sans MS" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="631.0" layoutY="315.0" opacity="0.65" prefHeight="18.0" prefWidth="76.0" text="180">
+         <font>
+            <Font name="Comic Sans MS" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="630.0" layoutY="255.0" opacity="0.65" prefHeight="18.0" prefWidth="76.0" text="56">
+         <font>
+            <Font name="Comic Sans MS" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="630.0" layoutY="191.0" opacity="0.65" prefHeight="18.0" prefWidth="76.0" text="18">
+         <font>
+            <Font name="Comic Sans MS" size="18.0" />
+         </font>
+      </Label>
+      <Text layoutX="830.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" text="kg" wrappingWidth="27.2496337890625">
+         <font>
+            <Font name="Comic Sans MS" size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="830.0" layoutY="334.0" strokeType="OUTSIDE" strokeWidth="0.0" text="cm" wrappingWidth="27.2496337890625">
+         <font>
+            <Font name="Comic Sans MS" size="18.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>
