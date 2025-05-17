@@ -1,119 +1,187 @@
+//
+// Source code recreated from a .class file by IntelliJ IDEA
+// (powered by FernFlower decompiler)
+//
+
 package backend.models;
-import backend.models.ranker;
+
 import java.util.Scanner;
 
 public class workoutplan {
-    private int running;
     private int pushups;
     private int pullups;
     private int squats;
     private int chinups;
     private int situps;
     private int lunges;
+    private int running;
+    int totalExercises = 0;
+    int totalReps = 0;
+    private Scanner sc;
 
-    Scanner sc = new Scanner(System.in);
+    public workoutplan() {
+        this.sc = new Scanner(System.in);
+    }
+
+    public int getPushups() {
+        return this.pushups;
+    }
+
+    public void setPushups(int pushups) {
+        if (pushups < 0) {
+            System.out.println("Invalid number");
+        } else {
+            this.pushups = pushups;
+        }
+
+    }
+
+    public int getPullups() {
+        return this.pullups;
+    }
+
+    public void setPullups(int pullups) {
+        if (pullups < 0) {
+            System.out.println("Invalid number");
+        } else {
+            this.pullups = pullups;
+        }
+
+    }
+
+    public int getSquats() {
+        return this.squats;
+    }
+
+    public void setSquats(int squats) {
+        if (squats < 0) {
+            System.out.println("Invalid number");
+        } else {
+            this.squats = squats;
+        }
+
+    }
+
+    public int getChinups() {
+        return this.chinups;
+    }
+
+    public void setChinups(int chinups) {
+        if (chinups < 0) {
+            System.out.println("Invalid number");
+        } else {
+            this.chinups = chinups;
+        }
+
+    }
+
+    public int getSitups() {
+        return this.situps;
+    }
+
+    public void setSitups(int situps) {
+        if (situps < 0) {
+            System.out.println("Invalid number");
+        } else {
+            this.situps = situps;
+        }
+
+    }
+
+    public int getLunges() {
+        return this.lunges;
+    }
+
+    public void setLunges(int lunges) {
+        if (lunges < 0) {
+            System.out.println("Invalid number");
+        } else {
+            this.lunges = lunges;
+        }
+
+    }
+
+    public int getRunning() {
+        return this.running;
+    }
+
+    public void setRunning(int running) {
+        if (running < 0) {
+            System.out.println("Invalid number");
+        } else {
+            this.running = running;
+        }
+
+    }
 
     public void inputWorkout() {
         System.out.println("\n******** ENTER YOUR WORKOUT ROUTINE ********");
-
         System.out.print("Number of pushups you can do: ");
-        pushups = sc.nextInt();
-
+        this.setPushups(this.sc.nextInt());
         System.out.print("Number of pullups you can do: ");
-        pullups = sc.nextInt();
-
+        this.setPullups(this.sc.nextInt());
         System.out.print("Number of squats you can do: ");
-        squats = sc.nextInt();
-
+        this.setSquats(this.sc.nextInt());
         System.out.print("Number of chinups you can do: ");
-        chinups = sc.nextInt();
-
+        this.setChinups(this.sc.nextInt());
         System.out.print("Number of situps you can do: ");
-        situps = sc.nextInt();
-
+        this.setSitups(this.sc.nextInt());
         System.out.print("Number of lunges you can do: ");
-        lunges = sc.nextInt();
-
+        this.setLunges(this.sc.nextInt());
         System.out.print("Number of km you can run: ");
-        running =sc.nextInt();
+        this.setRunning(this.sc.nextInt());
     }
 
     public void analyzeWorkout() {
-        int totalExercises = 0;
-        int totalReps = 0;
-
-        if (pushups > 0) {
-            totalExercises++;
-            totalReps += pushups;
-        }
-        if (pullups > 0) {
-            totalExercises++;
-            totalReps += pullups;
-        }
-        if (squats > 0) {
-            totalExercises++;
-            totalReps += squats;
-        }
-        if (chinups > 0) {
-            totalExercises++;
-            totalReps += chinups;
-        }
-        if (situps > 0) {
-            totalExercises++;
-            totalReps += situps;
-        }
-        if (lunges > 0) {
-            totalExercises++;
-            totalReps += lunges;
-        }
-        if (running > 0) {
-            totalExercises++;
-            totalReps += running;
+        if (this.pushups > 0) {
+            ++this.totalExercises;
+            this.totalReps += this.pushups;
         }
 
-        if (totalExercises == 0) {
-            System.out.println("\nYou have not entered any exercises! 😔");
+        if (this.pullups > 0) {
+            ++this.totalExercises;
+            this.totalReps += this.pullups;
+        }
+
+        if (this.squats > 0) {
+            ++this.totalExercises;
+            this.totalReps += this.squats;
+        }
+
+        if (this.chinups > 0) {
+            ++this.totalExercises;
+            this.totalReps += this.chinups;
+        }
+
+        if (this.situps > 0) {
+            ++this.totalExercises;
+            this.totalReps += this.situps;
+        }
+
+        if (this.lunges > 0) {
+            ++this.totalExercises;
+            this.totalReps += this.lunges;
+        }
+
+        if (this.running > 0) {
+            ++this.totalExercises;
+            this.totalReps += this.running;
+        }
+
+    }
+
+    public String showRank() {
+        System.out.println("\n******** YOUR MUSCLE RANK ********");
+        if (this.totalExercises == 0) {
+            return "F";
         } else {
-            double averageReps = (double) totalReps / totalExercises;
+            double averageReps = (double)this.totalReps / (double)this.totalExercises;
             System.out.println("\nYour average reps per exercise: " + averageReps);
-
-            if (averageReps >= 30) {
-                System.out.println("🏆 You are a PRO-level athlete!");
-            } else if (averageReps >= 15) {
-                System.out.println("🔥 You are at AMATEUR-level. Great job!");
+            if (averageReps >= (double)30.0F) {
+                return "A";
             } else {
-                System.out.println("💪 You are at BEGINNER-level. Keep working!");
+                return averageReps >= (double)15.0F ? "B" : "C";
             }
         }
     }
-            public void showRank(){
-                ranker r = new ranker();
-                System.out.println("\n******** YOUR MUSCLE RANKINGS ********");
-
-                if (pushups > 0) {
-                    System.out.println("Pushups Rank: " + r.getRank(pushups));
-                }
-                 if (pullups > 0) {
-                 System.out.println("Pullups Rank: " + r.getRank(pullups));
-                 }
-                 if (squats > 0) {
-                 System.out.println("Squats Rank: " + r.getRank(squats));
-                 }
-                 if (chinups > 0) {
-                 System.out.println("Chinups Rank: " + r.getRank(chinups));
-                 }
-                 if (situps > 0) {
-                     System.out.println("Situps Rank: " + r.getRank(situps));
-                 }
-
-                 if (lunges > 0) {
-                System.out.println("Lunges Rank: " + r.getRank(lunges));
-                 }
-                if (running > 0 ){
-                    System.out.println("running Rank: " + r.getRank(running));
-                }
-            }
 }
-
-
-

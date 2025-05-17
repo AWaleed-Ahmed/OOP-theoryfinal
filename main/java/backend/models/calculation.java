@@ -1,99 +1,51 @@
 package backend.models;
 
-public class calculation extends habit{
-   private double bmi;
-   double weigth;
-   double heigth;
+public class calculation {
+    private double bmi;
+    private double weight;
+    private double height;
 
-    public void bmical(double weight,double heigth){
-        this.weigth=weight;
-        this.heigth=heigth;
-        System.out.println();
-        System.out.println("*******************************************************************");
-        System.out.println();
-
+    public void bmical(double weight, double height) {
+        this.weight = weight;
+        this.height = height;
     }
-    public double index(){
-        bmi=(weigth*10000.0d)/ Math.pow(heigth,2.0d);
+
+    public double index() {
+        bmi = (weight * 10000.0d) / Math.pow(height, 2.0d);
         return bmi;
     }
 
-    public void display2(){
-        System.out.println("your BMI is : "+ bmi);
-        System.out.println();
-        System.out.println("*************************************************************************");
-        System.out.println("Do you want tips acc to your bmi  ");
-        System.out.println("Enter yes or no ");
-        String input=sc.next();
-        System.out.println("***********************************************************************");
-        if(input.equalsIgnoreCase("yes")){
-            if(bmi<18.5){
-                System.out.println();
-                System.out.println("YOU ARE UNDERWEIGTH");
-                System.out.println();
-                System.out.println("⛳Tips:\n" +
-                        "\n" +
-                        "⛳Eat more calories than you burn — aim for a calorie surplus\n" +
-                        "\n" +
-                        "⛳Focus on nutrient-dense foods: nuts, whole grains, avocados, lean meats\n" +
-                        "\n" +
-                        "⛳Do strength training to build healthy muscle mass\n" +
-                        "\n" +
-                        "⛳Eat frequently (every 2-3 hours)\n" +
-                        "\n" +
-                        "⛳Track your progress weekly — don’t just rely on weight");
-            } else if (bmi>18.5&&bmi<24.9) {
-                System.out.println();
-                System.out.println("YOU ARE NORMAL");
-                System.out.println();
-                System.out.println("Tips:\n" +
-                        "\n" +
-                        "⛳Maintain your weight with a balanced diet (carbs, proteins, fats)\n" +
-                        "\n" +
-                        "⛳Combine cardio (3x a week) with strength workouts\n" +
-                        "\n" +
-                        "\n" +
-                        "⛳Drink enough water (2-3 liters/day)\n" +
-                        "\n" +
-                        "⛳Focus on flexibility & mobility: try yoga or stretching");
-                
-            } else if (bmi>24.9&&bmi<30) {
-                System.out.println();
-                System.out.println("YOU ARE OVERWEIGTH");
-                System.out.println();
-                System.out.println(" Tips:\n" +
-                        "\n" +
-                        "⛳Aim for a calorie deficit: eat fewer calories than you burn\n" +
-                        "\n" +
-                        "⛳Cut down on sugary and processed foods\n" +
-                        "\n" +
-                        "⛳Start with light to moderate cardio: walking, cycling, swimming\n" +
-                        "\n" +
-                        "⛳Add high-protein meals to feel full longer\n" +
-                        "\n" +
-                        "⛳Avoid crash diets — go for slow, steady weight loss");
-            } else if (bmi>30) {
-                System.out.println();
-                System.out.println("YOU ARE normal");
-                System.out.println();
-                System.out.println("Tips:\n" +
-                        "\n" +
-                        "⛳Consult a doctor or nutritionist before starting\n" +
-                        "\n" +
-                        "⛳Begin with low-impact activities: walking, aqua aerobics\n" +
-                        "\n" +
-                        "⛳Track meals and portions with a food diary or app\n" +
-                        "\n" +
-                        "⛳Avoid sugary drinks — go for water or herbal tea\n" +
-                        "\n" +
-                        "⛳Stay consistent. Even small changes lead to big results over time");
-            }
-        }else if(input.equalsIgnoreCase("no")){
-            System.out.println("why do you not want any progress for u");
-            System.out.println("you should keep an eye that what going in your body");
+    public String getTips() {
+        StringBuilder tips = new StringBuilder();
 
+        if (bmi < 18.5) {
+            tips.append("YOU ARE UNDERWEIGHT\n\n")
+                    .append("⛳ Eat more calories than you burn — aim for a calorie surplus\n")
+                    .append("⛳ Focus on nutrient-dense foods: nuts, whole grains, avocados, lean meats\n")
+                    .append("⛳ Do strength training to build healthy muscle mass\n")
+                    .append("⛳ Eat frequently (every 2-3 hours)\n")
+                    .append("⛳ Track your progress weekly\n");
+        } else if (bmi < 24.9) {
+            tips.append("YOU ARE NORMAL\n\n")
+                    .append("⛳ Maintain your weight with a balanced diet\n")
+                    .append("⛳ Combine cardio with strength workouts\n")
+                    .append("⛳ Drink 2-3 liters of water daily\n")
+                    .append("⛳ Try yoga or stretching for flexibility\n");
+        } else if (bmi < 30) {
+            tips.append("YOU ARE OVERWEIGHT\n\n")
+                    .append("⛳ Aim for a calorie deficit\n")
+                    .append("⛳ Cut down on sugary and processed foods\n")
+                    .append("⛳ Start with moderate cardio: walking, cycling\n")
+                    .append("⛳ Eat high-protein meals\n");
+        } else {
+            tips.append("YOU ARE OBESE\n\n")
+                    .append("⛳ Consult a doctor or nutritionist\n")
+                    .append("⛳ Begin with low-impact activities\n")
+                    .append("⛳ Track meals with a food diary\n")
+                    .append("⛳ Avoid sugary drinks\n")
+                    .append("⛳ Stay consistent\n");
         }
 
+        return tips.toString();
     }
-
 }

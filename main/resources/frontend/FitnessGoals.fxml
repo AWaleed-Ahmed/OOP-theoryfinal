@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="backend.SceneController">
    <children>
       <ImageView fitHeight="1037.0" fitWidth="549.0" layoutX="201.0" layoutY="-238.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
          <image>
@@ -29,27 +29,27 @@
             <Font name="Cooper Black" size="30.0" />
          </font>
       </Label>
-      <Button layoutX="298.0" layoutY="138.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="372.0" text="Lose weight">
+      <Button layoutX="298.0" layoutY="138.0" mnemonicParsing="false" onAction="#switchToScene6" prefHeight="50.0" prefWidth="372.0" text="Lose weight">
          <font>
             <Font name="Comic Sans MS Bold" size="20.0" />
          </font>
       </Button>
-      <Button layoutX="298.0" layoutY="199.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="372.0" text="Gain muscle">
+      <Button layoutX="298.0" layoutY="199.0" mnemonicParsing="false" onAction="#switchToScene6" prefHeight="50.0" prefWidth="372.0" text="Gain muscle">
          <font>
             <Font name="Comic Sans MS Bold" size="20.0" />
          </font>
       </Button>
-      <Button layoutX="298.0" layoutY="264.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="372.0" text="Maintain weight">
+      <Button layoutX="298.0" layoutY="264.0" mnemonicParsing="false" onAction="#switchToScene6" prefHeight="50.0" prefWidth="372.0" text="Maintain weight">
          <font>
             <Font name="Comic Sans MS Bold" size="20.0" />
          </font>
       </Button>
-      <Button layoutX="298.0" layoutY="326.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="372.0" text="Improve endurance">
+      <Button layoutX="298.0" layoutY="326.0" mnemonicParsing="false" onAction="#switchToScene6" prefHeight="50.0" prefWidth="372.0" text="Improve endurance">
          <font>
             <Font name="Comic Sans MS Bold" size="20.0" />
          </font>
       </Button>
-      <Button layoutX="298.0" layoutY="393.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="372.0" text="General fitness">
+      <Button layoutX="298.0" layoutY="393.0" mnemonicParsing="false" onAction="#switchToScene6" prefHeight="50.0" prefWidth="372.0" text="General fitness">
          <font>
             <Font name="Comic Sans MS Bold" size="20.0" />
          </font>
