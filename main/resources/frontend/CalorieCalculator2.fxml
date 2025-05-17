@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="996.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="560.0" prefWidth="996.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="backend.SceneController">
    <children>
       <ImageView fitHeight="1005.0" fitWidth="572.0" layoutX="215.0" layoutY="-223.0" opacity="0.87" pickOnBounds="true" preserveRatio="true" rotate="90.0">
          <image>
@@ -25,15 +25,15 @@
             <Image url="@../images/whiteBackground.jpg" />
          </image>
       </ImageView>
-      <TextField layoutX="246.0" layoutY="162.0" prefHeight="43.0" prefWidth="240.0" promptText="e.g apple" style="-fx-border-color: black; -fx-background-color: white;">
+      <TextField fx:id="itemNameField" layoutX="246.0" layoutY="162.0" prefHeight="43.0" prefWidth="240.0" promptText="e.g apple" style="-fx-border-color: black; -fx-background-color: white;">
          <font>
             <Font name="Century Gothic" size="16.0" />
          </font></TextField>
-      <TextField layoutX="246.0" layoutY="291.0" prefHeight="43.0" prefWidth="240.0" promptText="e.g 95" style="-fx-border-color: black; -fx-background-color: white;">
+      <TextField fx:id="calorieField" layoutX="246.0" layoutY="291.0" prefHeight="43.0" prefWidth="240.0" promptText="e.g 95" style="-fx-border-color: black; -fx-background-color: white;">
          <font>
             <Font name="Century Gothic" size="16.0" />
          </font></TextField>
-      <TextField layoutX="246.0" layoutY="228.0" prefHeight="43.0" prefWidth="240.0" promptText="e.g 1" style="-fx-border-color: black; -fx-background-color: white;">
+      <TextField fx:id="quantityField" layoutX="246.0" layoutY="228.0" prefHeight="43.0" prefWidth="240.0" promptText="e.g 1" style="-fx-border-color: black; -fx-background-color: white;">
          <font>
             <Font name="Century Gothic" size="16.0" />
          </font></TextField>
@@ -52,7 +52,12 @@
             <Font name="Cooper Black" size="30.0" />
          </font>
       </Label>
-      <Button layoutX="448.0" layoutY="374.0" mnemonicParsing="false" onAction="#switchToScene4" prefHeight="35.0" prefWidth="98.0" style="-fx-border-color: black;" text="Next item">
+      <Label fx:id="totalCaloriesResultLabel" layoutX="250" layoutY="338" prefHeight="26.0" prefWidth="240.0" textAlignment="JUSTIFY">
+         <font>
+            <Font name="Cooper Black" size="10.0" />
+         </font>
+      </Label>
+      <Button layoutX="448.0" layoutY="374.0" mnemonicParsing="false" onAction="#switchToScene7" prefHeight="35.0" prefWidth="98.0" style="-fx-border-color: black;" text="Next item">
          <font>
             <Font name="Cooper Black" size="14.0" />
          </font>
@@ -69,10 +74,15 @@
       </ImageView>
       <ImageView fitHeight="350.0" fitWidth="349.0" layoutX="608.0" layoutY="-12.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../OOP_thoery/src/main/resources/images/v1018-elements-006-Photoroom.png" />
+            <Image url="@/images/v1018-elements-006-Photoroom.png" />
          </image>
       </ImageView>
-      <Label layoutX="681.0" layoutY="74.0" prefHeight="126.0" prefWidth="181.0" wrapText="true">
+      <Button layoutX="147.0" layoutY="374.0" mnemonicParsing="false" onAction="#handleAddFoodItem" prefHeight="35.0" prefWidth="240.0" style="-fx-border-color: black;" text="Add Item">
+         <font>
+            <Font name="Cooper Black" size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="tips" layoutX="725.0" layoutY="92.0" prefHeight="126.0" prefWidth="184.0" text="text" wrapText="true">
          <font>
             <Font name="Comic Sans MS" size="14.0" />
          </font>
