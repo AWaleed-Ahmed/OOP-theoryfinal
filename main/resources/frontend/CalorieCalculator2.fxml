@@ -57,11 +57,6 @@
             <Font name="Cooper Black" size="10.0" />
          </font>
       </Label>
-      <Button layoutX="448.0" layoutY="374.0" mnemonicParsing="false" onAction="#switchToScene7" prefHeight="35.0" prefWidth="98.0" style="-fx-border-color: black;" text="Next item">
-         <font>
-            <Font name="Cooper Black" size="14.0" />
-         </font>
-      </Button>
       <ImageView fitHeight="213.0" fitWidth="207.0" layoutX="791.0" layoutY="227.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/eatingNoodlesPanda.png" />
