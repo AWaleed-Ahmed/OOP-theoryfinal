@@ -173,6 +173,7 @@ public void switchToScene3(ActionEvent event) throws IOException {
             System.out.println("Password must be numeric.");
         }
     }
+    // ye kia hy?
     public void switchToScene10(ActionEvent event) throws IOException {          // Scene 5: FitnessGoals
         Parent root = FXMLLoader.load(getClass().getResource("/frontend/FitnessGoals.fxml"));
         Stage stage = (Stage)((Node)event.getSource()).getScene().getWindow();
