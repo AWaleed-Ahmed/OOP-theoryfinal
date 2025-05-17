@@ -1,6 +1,6 @@
 package backend;
 
-import backend.models.authenticator;
+import backend.models.Authenticator;
 import backend.models.BMI_Calculation_Tips;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -17,7 +17,7 @@ import java.net.URL;
 import java.util.Objects;
 
 public class SceneController {
-    authenticator auth;
+    Authenticator auth;
     public SceneController() {
         this.auth = Main.auth;
     }

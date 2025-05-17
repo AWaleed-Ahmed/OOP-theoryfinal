@@ -7,44 +7,45 @@ package backend.models;
 
 import java.util.Scanner;
 
-public class workoutplan {
-    private int pushups;
-    private int pullups;
+public class WorkoutPlan {
+    private int pushUps;
+    private int pullUps;
     private int squats;
-    private int chinups;
-    private int situps;
     private int lunges;
+    private int burpees;
+    private int sitUps;
+
     private int running;
     int totalExercises = 0;
     int totalReps = 0;
     private Scanner sc;
 
-    public workoutplan() {
+    public WorkoutPlan() {
         this.sc = new Scanner(System.in);
     }
 
-    public int getPushups() {
-        return this.pushups;
+    public int getPushUps() {
+        return this.pushUps;
     }
 
-    public void setPushups(int pushups) {
-        if (pushups < 0) {
+    public void setPushUps(int pushUps) {
+        if (pushUps < 0) {
             System.out.println("Invalid number");
         } else {
-            this.pushups = pushups;
+            this.pushUps = pushUps;
         }
 
     }
 
-    public int getPullups() {
-        return this.pullups;
+    public int getPullUps() {
+        return this.pullUps;
     }
 
-    public void setPullups(int pullups) {
-        if (pullups < 0) {
+    public void setPulls(int pullUps) {
+        if (pullUps < 0) {
             System.out.println("Invalid number");
         } else {
-            this.pullups = pullups;
+            this.pullUps = pullUps;
         }
 
     }
@@ -62,28 +63,28 @@ public class workoutplan {
 
     }
 
-    public int getChinups() {
-        return this.chinups;
+    public int getBurpees() {
+        return this.burpees;
     }
 
-    public void setChinups(int chinups) {
-        if (chinups < 0) {
+    public void setBurpees(int burpees) {
+        if (burpees < 0) {
             System.out.println("Invalid number");
         } else {
-            this.chinups = chinups;
+            this.burpees = burpees;
         }
 
     }
 
-    public int getSitups() {
-        return this.situps;
+    public int getSitUps() {
+        return this.sitUps;
     }
 
-    public void setSitups(int situps) {
-        if (situps < 0) {
+    public void setSitUps(int sitUps) {
+        if (sitUps < 0) {
             System.out.println("Invalid number");
         } else {
-            this.situps = situps;
+            this.sitUps = sitUps;
         }
 
     }
@@ -116,16 +117,16 @@ public class workoutplan {
 
     public void inputWorkout() {
         System.out.println("\n******** ENTER YOUR WORKOUT ROUTINE ********");
-        System.out.print("Number of pushups you can do: ");
-        this.setPushups(this.sc.nextInt());
+        System.out.print("Number of pushUps you can do: ");
+        this.setPushUps(this.sc.nextInt());
         System.out.print("Number of pullups you can do: ");
-        this.setPullups(this.sc.nextInt());
+        this.setPulls(this.sc.nextInt());
         System.out.print("Number of squats you can do: ");
         this.setSquats(this.sc.nextInt());
         System.out.print("Number of chinups you can do: ");
-        this.setChinups(this.sc.nextInt());
+        this.setBurpees(this.sc.nextInt());
         System.out.print("Number of situps you can do: ");
-        this.setSitups(this.sc.nextInt());
+        this.setSitUps(this.sc.nextInt());
         System.out.print("Number of lunges you can do: ");
         this.setLunges(this.sc.nextInt());
         System.out.print("Number of km you can run: ");
@@ -133,14 +134,14 @@ public class workoutplan {
     }
 
     public void analyzeWorkout() {
-        if (this.pushups > 0) {
+        if (this.pushUps > 0) {
             ++this.totalExercises;
-            this.totalReps += this.pushups;
+            this.totalReps += this.pushUps;
         }
 
-        if (this.pullups > 0) {
+        if (this.pullUps > 0) {
             ++this.totalExercises;
-            this.totalReps += this.pullups;
+            this.totalReps += this.pullUps;
         }
 
         if (this.squats > 0) {
@@ -148,14 +149,14 @@ public class workoutplan {
             this.totalReps += this.squats;
         }
 
-        if (this.chinups > 0) {
+        if (this.burpees > 0) {
             ++this.totalExercises;
-            this.totalReps += this.chinups;
+            this.totalReps += this.burpees;
         }
 
-        if (this.situps > 0) {
+        if (this.sitUps > 0) {
             ++this.totalExercises;
-            this.totalReps += this.situps;
+            this.totalReps += this.sitUps;
         }
 
         if (this.lunges > 0) {

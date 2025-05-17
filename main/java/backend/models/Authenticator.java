@@ -12,7 +12,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class authenticator {
+public class Authenticator {
     String[] username = new String[50];
     int[] password = new int[50];
     int usercount = 0;

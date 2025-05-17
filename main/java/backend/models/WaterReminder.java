@@ -3,7 +3,7 @@ package backend.models;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class waterreminder {
+public class WaterReminder {
     public void reminder(){
         Timer timer=new Timer();
         timer.schedule(new TimerTask() {

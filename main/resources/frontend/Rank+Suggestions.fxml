@@ -9,9 +9,9 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="950.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="backend.SceneController">
     <children>
-        <ImageView fitHeight="1064.0" fitWidth="479.0" layoutX="293.0" layoutY="-295.0" pickOnBounds="true" preserveRatio="true" rotate="90.0" style="-fx-opacity: 1;">
+        <ImageView fitHeight="1064.0" fitWidth="479.0" layoutX="293.0" layoutY="-293.0" pickOnBounds="true" preserveRatio="true" rotate="90.0" style="-fx-opacity: 1;">
             <image>
-                <Image url="@../images/multiColoredGreenBackground.jpg" />
+                <Image url="@../images/layeredMultiGreenBackground.jpeg" />
             </image>
         </ImageView>
         <ImageView fitHeight="387.0" fitWidth="257.0" layoutX="92.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
@@ -44,12 +44,12 @@
                 <Font name="Cooper Black" size="24.0" />
             </font>
         </Label>
-        <Label layoutX="647.0" layoutY="303.0" prefHeight="38.0" prefWidth="278.0" style="-fx-background-color: teal; -fx-border-color: black; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-width: 3;" text=" GET YOURSELF A GYM BRO">
+        <Label layoutX="663.0" layoutY="291.0" prefHeight="38.0" prefWidth="278.0" style="-fx-background-color: teal; -fx-border-color: black; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-width: 3;" text=" GET YOURSELF A GYM BRO">
             <font>
                 <Font name="Comic Sans MS Bold" size="18.0" />
             </font>
         </Label>
-        <Label layoutX="475.0" layoutY="99.0" prefHeight="38.0" prefWidth="133.0" style="-fx-background-color: teal; -fx-border-color: black; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-width: 3;" text=" BEST TIP?">
+        <Label layoutX="475.0" layoutY="99.0" prefHeight="38.0" prefWidth="104.0" style="-fx-background-color: teal; -fx-border-color: black; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-width: 3;" text=" PRO TIP?">
             <font>
                 <Font name="Comic Sans MS Bold" size="18.0" />
             </font>
@@ -59,9 +59,9 @@
                 <Font name="Cooper Black" size="24.0" />
             </font>
         </Label>
-        <Label layoutX="42.0" layoutY="234.0" prefHeight="114.0" prefWidth="358.0" underline="true" wrapText="true">
+        <Label layoutX="42.0" layoutY="234.0" prefHeight="100.0" prefWidth="358.0" underline="true" wrapText="true">
             <font>
-                <Font name="Comic Sans MS" size="24.0" />
+                <Font name="Comic Sans MS" size="16.0" />
             </font>
         </Label>
     </children>
