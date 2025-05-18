@@ -15,7 +15,7 @@ public class WorkoutPlan {
     private int burpees;
     private int sitUps;
 
-    private int running;
+//    private int running;
     int totalExercises = 0;
     int totalReps = 0;
     private Scanner sc;
@@ -102,18 +102,18 @@ public class WorkoutPlan {
 
     }
 
-    public int getRunning() {
-        return this.running;
-    }
-
-    public void setRunning(int running) {
-        if (running < 0) {
-            System.out.println("Invalid number");
-        } else {
-            this.running = running;
-        }
-
-    }
+//    public int getRunning() {
+//        return this.running;
+//    }
+//
+//    public void setRunning(int running) {
+//        if (running < 0) {
+//            System.out.println("Invalid number");
+//        } else {
+//            this.running = running;
+//        }
+//
+//    }
 
     public void inputWorkout() {
         System.out.println("\n******** ENTER YOUR WORKOUT ROUTINE ********");
@@ -129,8 +129,8 @@ public class WorkoutPlan {
         this.setSitUps(this.sc.nextInt());
         System.out.print("Number of lunges you can do: ");
         this.setLunges(this.sc.nextInt());
-        System.out.print("Number of km you can run: ");
-        this.setRunning(this.sc.nextInt());
+//        System.out.print("Number of km you can run: ");
+//        this.setRunning(this.sc.nextInt());
     }
 
     public void analyzeWorkout() {
@@ -164,10 +164,10 @@ public class WorkoutPlan {
             this.totalReps += this.lunges;
         }
 
-        if (this.running > 0) {
-            ++this.totalExercises;
-            this.totalReps += this.running;
-        }
+//        if (this.running > 0) {
+//            ++this.totalExercises;
+//            this.totalReps += this.running;
+//        }
 
     }
 

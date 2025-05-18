@@ -25,9 +25,18 @@
                 <Image url="@../images/whiteBackground.jpg" />
             </image>
         </ImageView>
-        <TextField layoutX="456.0" layoutY="92.0" prefHeight="43.0" prefWidth="240.0" style="-fx-border-color: black; -fx-background-color: white;" />
-        <TextField layoutX="456.0" layoutY="221.0" prefHeight="43.0" prefWidth="240.0" style="-fx-border-color: black; -fx-background-color: white;" />
-        <TextField layoutX="456.0" layoutY="158.0" prefHeight="43.0" prefWidth="240.0" style="-fx-border-color: black; -fx-background-color: white;" />
+        <TextField layoutX="456.0" layoutY="92.0" prefHeight="43.0" prefWidth="240.0" promptText="e.g 25" style="-fx-border-color: black; -fx-background-color: white;">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font></TextField>
+        <TextField layoutX="456.0" layoutY="221.0" prefHeight="43.0" prefWidth="240.0" style="-fx-border-color: black; -fx-background-color: white;">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font></TextField>
+        <TextField layoutX="456.0" layoutY="158.0" prefHeight="43.0" prefWidth="240.0" style="-fx-border-color: black; -fx-background-color: white;">
+         <font>
+            <Font name="Century Gothic Bold" size="16.0" />
+         </font></TextField>
         <Label layoutX="273.0" layoutY="96.0" prefHeight="35.0" prefWidth="139.0" text="Push-ups" textAlignment="JUSTIFY">
             <font>
                 <Font name="Cooper Black" size="30.0" />
@@ -43,9 +52,18 @@
                 <Font name="Cooper Black" size="30.0" />
             </font>
         </Label>
-        <TextField layoutX="457.0" layoutY="279.0" prefHeight="43.0" prefWidth="240.0" style="-fx-border-color: black; -fx-background-color: white;" />
-        <TextField layoutX="457.0" layoutY="408.0" prefHeight="43.0" prefWidth="240.0" style="-fx-border-color: black; -fx-background-color: white;" />
-        <TextField layoutX="457.0" layoutY="345.0" prefHeight="43.0" prefWidth="240.0" style="-fx-border-color: black; -fx-background-color: white;" />
+        <TextField layoutX="457.0" layoutY="279.0" prefHeight="43.0" prefWidth="240.0" style="-fx-border-color: black; -fx-background-color: white;">
+         <font>
+            <Font name="Century Gothic" size="16.0" />
+         </font></TextField>
+        <TextField layoutX="457.0" layoutY="408.0" prefHeight="43.0" prefWidth="240.0" style="-fx-border-color: black; -fx-background-color: white;">
+         <font>
+            <Font name="Century Gothic" size="16.0" />
+         </font></TextField>
+        <TextField layoutX="457.0" layoutY="345.0" prefHeight="43.0" prefWidth="240.0" style="-fx-border-color: black; -fx-background-color: white;">
+         <font>
+            <Font name="Century Gothic" size="16.0" />
+         </font></TextField>
         <Label layoutX="273.0" layoutY="283.0" prefHeight="35.0" prefWidth="114.0" text="Lunges" textAlignment="JUSTIFY">
             <font>
                 <Font name="Cooper Black" size="30.0" />
@@ -66,8 +84,7 @@
                 <Font name="Cooper Black" size="30.0" />
             </font>
         </Label>
-        <Label layoutX="462.0" layoutY="105.0" prefHeight="18.0" prefWidth="46.0" text="e.g 20" textFill="#868686" />
-        <ImageView fitHeight="200.0" fitWidth="203.0" layoutX="719.0" layoutY="289.0" pickOnBounds="true" preserveRatio="true">
+        <ImageView fitHeight="234.0" fitWidth="230.0" layoutX="704.0" layoutY="260.0" pickOnBounds="true" preserveRatio="true">
             <image>
                 <Image url="@../images/SkippingPanda-Photoroom.png" />
             </image>
